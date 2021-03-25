@@ -28,13 +28,10 @@ import retrofit2.Response;
 
 
 public class MainActivity extends AppCompatActivity {
-    private int currentScreenOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED;
     ApiInterface apiInterface;
     ActivityMainBinding binding;
-
     private static final String TAG = "MainActivity";
     List<Items> itemsList;
-
     ItemAdapter adapter;
 
 
@@ -45,9 +42,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         binding=DataBindingUtil.setContentView(this,R.layout.activity_main);
-   apiInterface=ClientInstance.getInstance().create(ApiInterface.class);
+       apiInterface=ClientInstance.getInstance().create(ApiInterface.class);
         itemsList=new ArrayList<>();
         adapter=new ItemAdapter(this,itemsList);
+
         getAllData();
     }
 
@@ -97,11 +95,7 @@ public class MainActivity extends AppCompatActivity {
                     binding.shimmerEffect.stopShimmer();
                     binding.shimmerEffect.setVisibility( View.GONE );
 
-
                 }
-
-
-
             }
 
             @Override

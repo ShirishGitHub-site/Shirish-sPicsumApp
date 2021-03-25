@@ -10,7 +10,5 @@ import retrofit2.http.GET;
 public interface ApiInterface {
 
     @GET("list")
-    Call<ArrayList<Items>> getAllData(
-
-    );
+    Call<ArrayList<Items>> getAllData();
 }
