@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            tools:context=".Activity.MainActivity">
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="#000"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/glory"
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem Picsum"></TextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_below="@id/title"
+                android:layout_height="match_parent"
+
+                android:id="@+id/res_view">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+        </RelativeLayout>
+
+
+</layout>
